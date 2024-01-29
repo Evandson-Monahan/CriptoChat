@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+    --color-primary: #d31010;
+    --color-text: #ffffff;
+    --color-body: #18191f;
+    --color-white: #eeb9b9;
+    --color-text-msg: #d31010;
+    --color-text-smaller: #d31010;
+    --color-btn-secondary: #eb5757;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-body);
+}
+.logo__alura {
+    width: 7.5rem;
+}
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 2.5rem;
+}
+.section__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+.textarea__input {
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 18.75rem;
+    width: 100%;
+}
+.textarea__input::placeholder {
+    color: var(--color-text);
+    font-size: 2rem;
+}
+.warning__text {
+    display: flex;
+    align-items: center;
+}
+.warning__text span {
+    font-size: .75rem;
+    margin-left: .5rem;
+}
+.input__buttons {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+.btn__cript {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--color-btn-secondary);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn__cript:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+.btn__cript.blue {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.btn__cript.blue:hover {
+    color: var(--color-text);
+    background-color: var(--color-body);
+}
+.btn__cript.btn-copy {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1.2rem;
+    background-color: var(--color-white);
+    transition: background-color 0.3s, color 0.3s, transform 200ms;
+}
+.btn__cript.btn-copy:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+.btn__cript.btn-copy:active {
+    transform: scale(1.1);
+}
+.section__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    width: 18.75rem;
+    padding: 1.5rem;
+}
+.right__text-warning {
+    color: var(--color-text-msg);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 100%;
+}
+.right__text-smaller {
+    color: var(--color-text-smaller);
+    font-size: 1rem;
+}
+.img__people {
+    width: 15.5rem;
+}
+
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+    }
+    .section__input{
+        margin-top: 2rem;
+    }
+    .section__right {
+        width: 100%;
+    }
+}
+@media (max-width: 550px) {
+    body {
+        padding: 0;
+    }
+    header {
+        margin-top: 1rem;
+    }
+    .logo__alura {
+        width: 2rem;
+        
+    }
+    .section__input {
+        justify-content: center;
+        margin: 0 2rem;
+        padding: 0 1rem;
+    }
+    .textarea__input {
+        height: 9.5rem;
+    }
+    .input__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__right {
+        border-radius: 0;
+    }
+    .textarea__input.output {
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+}
